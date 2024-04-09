@@ -70,6 +70,9 @@ class AddressBook(UserDict):
     def delete(self, name):
         self.data.pop(name)
 
+    def __str__(self):
+        return "\n".join(str(record) for record in self.data.values())
+
 
 # Створення нової адресної книги
 book = AddressBook()
